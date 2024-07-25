@@ -35,7 +35,7 @@ pub fn transfer_nft(ctx: Context<TransferNft>)->ProgramResult{
                 mint: ctx.accounts.mint.to_account_info(),
                 system_program: ctx.accounts.system_program.to_account_info(),
                 token_program: ctx.accounts.token_program.to_account_info(),
-                rent: ctx.accounts.rent.to_account_info(),
+                // rent: ctx.accounts.rent.to_account_info(),
             },
         ),
     )?;
@@ -77,7 +77,7 @@ pub struct TransferNft<'info>{
     #[account(mut)]
     pub buyer_authority: Signer<'info>,
     pub token_program: Program<'info, token::Token>,
-    pub rent: Sysvar<'info, Rent>,
+    // pub rent: Sysvar<'info, Rent>,
     pub system_program: Program<'info, System>,
     pub associated_token_program: Program<'info, associated_token::AssociatedToken>,
 }
