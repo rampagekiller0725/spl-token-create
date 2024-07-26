@@ -66,6 +66,7 @@ pub struct TransferNft<'info>{
     /// CHECK: This is not dangerous because we don't read or write from this account
     buyer: AccountInfo<'info>,
     #[account(mut)]
+    /// CHECK: This is not dangerous because we don't read or write from this account
     seller: AccountInfo<'info>,
     #[account(mut)]
     pub mint: Account<'info, token::Mint>,
