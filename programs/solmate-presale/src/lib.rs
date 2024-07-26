@@ -63,6 +63,7 @@ pub fn transfer_nft(ctx: Context<TransferNft>)->ProgramResult{
 #[derive(Accounts)]
 pub struct TransferNft<'info>{
     #[account(mut)]
+    /// CHECK: This is not dangerous because we don't read or write from this account
     buyer: AccountInfo<'info>,
     #[account(mut)]
     seller: AccountInfo<'info>,
