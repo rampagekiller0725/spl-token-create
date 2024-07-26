@@ -75,6 +75,7 @@ pub struct TransferNft<'info>{
     #[account(mut)]
     pub token_holder:Signer<'info,>, //signer
     #[account(mut)]
+    /// CHECK: This is not dangerous because we don't read or write from this account
     pub buyer_token_account: UncheckedAccount<'info>, //UncheckedAccount<'info>,
     #[account(mut)]
     pub buyer_authority: Signer<'info>,
