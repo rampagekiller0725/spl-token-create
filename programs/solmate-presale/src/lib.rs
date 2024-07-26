@@ -10,7 +10,7 @@ use {
     },
 };
 
-declare_id!("HXbR9vT3guUKtip1Z88R3hxRNpEaScV97fwn8nYsL54D");
+declare_id!("64xhQ9y8CcQ1PVWYkLuZ9uR5RXCTZj8WmSe11ra8nJ34");
 
 
 #[program]
